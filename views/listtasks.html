@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        <a href="/">Home</a>
+        <a href="newtask">Add New Task</a>
+        <a href="/deleteCompleteTasks">Delete Complete Tasks</a>
+    </h2>
+    <table>
+        <tr>
+            <td>Task Id</td>
+            <td>Task Name</td>
+            <td>Assign To</td>
+            <td>Due Date</td>
+            <td>Task Status</td>
+            <td>Description</td>
+        </tr>
+
+        <% for(var i=0; i<tasks.length; i++){ %>
+        <tr>
+            <td>
+                <%= tasks[i].TaskId %>
+            </td>
+            <td>
+                <%= tasks[i].TaskName %>
+            </td>
+            <td>
+                <%= tasks[i].AssignTo %>
+            </td>
+            <td>
+                <%= tasks[i].DueDate %>
+            </td>
+            <td>
+                <%= tasks[i].TaskStatus %>
+            </td>
+            <td>
+                <%= tasks[i].TaskDescription %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    
+    <div style="margin-top: 30px;">
+        <form action="/deletetask" method="POST">
+            <span style="color: darkblue; font-weight: bold;">Task ID</span>
+            <input type="text" name="taskId" />
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+
+    <div style="border:10px;">
+        <h3>Update Task</h3>
+        <form action="/updatetask" method="POST">
+            Task Id
+            <input type="text" name="taskid" /></br>
+            Task Status
+            <input type="text" name='taskStatus' list="status_list" />
+            <datalist id="status_list">
+                <option>InProcess</option>
+                <option>Complete</option>
+            </datalist></br>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        <a href="/">Home</a>
+        <a href="newDeveloper">Add New Developer</a>
+    </h2>
+    <table>
+        <tr>
+            <td>_id</td>
+            <td>Developer Id</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Level</td>
+            <td>State</td>
+            <td>Suburb</td>
+            <td>Street</td>
+            <td>Unit</td>
+        </tr>
+
+        <% for(var i=0; i<developers.length; i++){ %>
+        <tr>
+            <td>
+                <%= developers[i]._id %>
+            </td>
+            <td>
+                <%= developers[i].DeveloperId %>
+            </td>
+            <td>
+                <%= developers[i].Name.firstName %>
+            </td>
+            <td>
+                <%= developers[i].Name.lastName %>
+            </td>
+            <td>
+                <%= developers[i].Level %>
+            </td>
+            <td>
+                <%= developers[i].Address.State %>
+            </td>
+            <td>
+                <%= developers[i].Address.Suburb %>
+            </td>
+            <td>
+                <%= developers[i].Address.Street %>
+            </td>
+            <td>
+                <%= developers[i].Address.Unit %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    
+    <!-- <div style="margin-top: 30px;">
+        <form action="/delete" method="POST">
+            <span style="color: darkblue; font-weight: bold;">Developer ID</span>
+            <input type="text" name="taskId" />
+            <input type="submit" value="Delete" />
+        </form>
+    </div> -->
+
+</body>
+</html>

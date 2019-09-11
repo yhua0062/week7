@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <title>To Do App</title>
+</head>
+<body>
+    <h2>
+        <a href="/">Home</a>
+        <a href="listdevelopers">List All Developers</a>
+    </h2>
+    
+    <form action="/addDeveloper" method="POST">
+        First name
+        <input type="text" name="firstName" /></br>
+        Last name
+        <input type="text" name="lastName" /><br>
+        Level
+        <input type="text" name='level' list="level_list" />
+        <datalist id="level_list">
+            <option>Beginner</option>
+            <option>Expert</option>
+        </datalist></br>
+        Address
+        <input type="text" name="state" placeholder="state" />
+        <input type="text" name="suburb" placeholder="suburb" />
+        <input type="text" name="street" placeholder="street" />
+        <input type="text" name="unit" placeholder="unit" /></br>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <title>To Do App</title>
+</head>
+<body>
+    <h2>
+        <a href="/">Home</a>
+        <a href="listtasks">List All Tasks</a>
+    </h2>
+    <form action="/addtask" method="POST">
+        Task Name
+        <input type="text" name="taskName" /></br>
+        Assign To
+        <input type="ObjectId" name="assignTo" /><br>
+        Task Due
+        <input type='text' name='taskDue' /></br>
+        Task Status
+        <input type="text" name='taskStatus' list="status_list" />
+        <datalist id="status_list">
+            <option>InProcess</option>
+            <option>Complete</option>
+        </datalist></br>
+        Task Desc
+        <input type='text' name='taskDesc' /></br>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+table,th,td {
+	border: 1px solid black;
+}
+
+h1 {
+	background-color: bisque;
+	width: fit-content;
+}
+
+body {
+	background-color: #008B8B;
+}
